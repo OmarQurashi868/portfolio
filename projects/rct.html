@@ -14,7 +14,7 @@
         }
 
         a {
-            color:  deepskyblue;
+            color: deepskyblue;
         }
 
         @media screen and (min-width: 992px) {
@@ -28,29 +28,27 @@
 
 <body>
     <a href="../index.html">Home</a>
-    <h1>Heist</h1>
-    <a href="https://github.com/OmarQurashi868/heist" target="_blank" rel="noopener noreferrer">Github repo</a>
+    <h1>RCT</h1>
+    <a href="https://github.com/OmarQurashi868/rct" target="_blank" rel="noopener noreferrer">Github repo</a>
+    <br>
+    <a href="https://rctgg.vercel.app/" target="_blank" rel="noopener noreferrer">Website link(API not working)</a>
     <p>
-        This is a WIP demo recreation of an N64 game called <a
-            href="https://en.wikipedia.org/wiki/Conker%27s_Bad_Fur_Day" target="_blank"
-            rel="noopener noreferrer">"Conker's bad fur day"</a>, specifically a local multiplayer mode called "Heist".
+        A frontend stat displayer and tracker built for Ubisoft's game, <a
+            href="https://en.wikipedia.org/wiki/Roller_Champions" target="_blank" rel="noopener noreferrer">"Roller
+            Champions"</a>.
     </p>
     <p>
-        The game involvs 4 players (or teams) competing to steal the most money and store it in their vaults, using
-        various weapons laid throughout the map.
+        The website made calls to the then-public Ubisoft API carrying data such as game_id, user_id, API_key and such. Then calculating and formatting the received data into easy-to-understand sections.
     </p>
     <p>
-        The game was built on the <a
-        href="https://godotengine.org/" target="_blank"
-        rel="noopener noreferrer">Godot</a> engine which uses the GDScript language that is based on Python, the engine is completely free and open-source. Models were created using <a
-        href="https://www.blender.org/" target="_blank"
-        rel="noopener noreferrer">Blender</a>
+        The API_key needed to be regenerated every 3 hours as it would expire by that time, forcing me to check for the API_key's validity first and regenerating a new one of it's expired.
     </p>
     <p>
-        Implemented so far is character movement and spawning, team and score logic, various weapons, attacking and death (with animations!), all in a simple test map inspired by the original.
+        The API has since been changed, rendering the website useless as it's unable to make any calls. Moreover, Ubisoft later implemented their own tracking platform using private API calls.
     </p>
-    <img src="../images/heist1.png" alt="Screenshot of game" style="width:500px;height:300px;">
-    <img src="../images/heist2.gif" alt="Screenshot of game" style="width:500px;height:300px;">
+    <img src="../images/rct1.png" alt="Screenshot of game" style="width:500px;height:300px;">
+    <img src="../images/rct2.png" alt="Screenshot of game" style="width:500px;height:300px;">
+    <img src="../images/rct3.png" alt="Screenshot of game" style="width:300px;height:600px;">
 </body>
 
 </html>
