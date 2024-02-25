@@ -14,7 +14,7 @@
         }
 
         a {
-            color:  deepskyblue;
+            color: deepskyblue;
         }
 
         @media screen and (min-width: 992px) {
@@ -28,29 +28,34 @@
 
 <body>
     <a href="../index.html">Home</a>
-    <h1>Heist</h1>
-    <a href="https://github.com/OmarQurashi868/heist" target="_blank" rel="noopener noreferrer">Github repo</a>
+    <h1>A-star-hex-grid-2d</h1>
+    <a href="https://github.com/OmarQurashi868/a-star-hex-grid-2d" target="_blank" rel="noopener noreferrer">Github
+        repo</a>
     <p>
-        This is a WIP demo recreation of an N64 game called <a
-            href="https://en.wikipedia.org/wiki/Conker%27s_Bad_Fur_Day" target="_blank"
-            rel="noopener noreferrer">"Conker's bad fur day"</a>, specifically a local multiplayer mode called "Heist".
+        This is an implementation of the A* pathfinding algorithm modified to accomodate hex-based 2D grids in the Godot
+        game engine.
     </p>
     <p>
-        The game involvs 4 players (or teams) competing to steal the most money and store it in their vaults, using
-        various weapons laid throughout the map.
+        The way that 2D grids count coordinates for hexagonal grids causes some issues because hexagonal grids have 6
+        neighbors instead of 4, which means that if you connect the points that a normal grid needs you'd have 2
+        disconnected points left. But at the same time if you enable all 4 diagonals you'll get 2 extra points that
+        break the pattern.
     </p>
     <p>
-        The game was built on the <a
-        href="https://godotengine.org/" target="_blank"
-        rel="noopener noreferrer">Godot</a> engine which uses the GDScript language that is based on Python, the engine is completely free and open-source. Models were created using <a
-        href="https://www.blender.org/" target="_blank"
-        rel="noopener noreferrer">Blender</a>
+        The 2 disconnected points that need to be connected to the center hexagonal cell switch directions every row (or
+        column for vertical offset). For even row numbers the 2 missing points are top-left and bottom-left, but for odd
+        row numbers it's top-right and bottom-right. For vertical offset grids it's swapped around, for even column
+        numbers the missing points are top-left and top-right, but for odd it's bottom-left and bottom-right.
     </p>
     <p>
-        Implemented so far is character movement and spawning, team and score logic, various weapons, attacking and death (with animations!), all in a simple test map inspired by the original.
+        I have basically added a function that connects a point to its neighboring 6 points using the logic above that's
+        called for each (non-solid) point.
     </p>
-    <img src="../images/heist1.png" alt="Screenshot of game" style="width:500px;height:300px;">
-    <img src="../images/heist2.gif" alt="Screenshot of game" style="width:500px;height:300px;">
+    <p>
+        The demo was built on the <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot</a>
+        engine which uses the GDScript language that is based on Python, the engine is completely free and open-source.
+    </p>
+    <img src="../images/a-star.gif" alt="Screenshot of game" style="width:500px;height:300px;">
 </body>
 
 </html>
