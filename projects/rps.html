@@ -14,7 +14,7 @@
         }
 
         a {
-            color:  deepskyblue;
+            color: deepskyblue;
         }
 
         @media screen and (min-width: 992px) {
@@ -29,28 +29,25 @@
 <body>
     <a href="../index.html">Home</a>
     <h1>Heist</h1>
-    <a href="https://github.com/OmarQurashi868/heist" target="_blank" rel="noopener noreferrer">Github repo</a>
+    <a href="https://github.com/OmarQurashi868/psycho-rps" target="_blank" rel="noopener noreferrer">Github repo</a>
+    <br>
+    <a href="http://psycho-rps.vercel.app/" target="_blank" rel="noopener noreferrer">Website link</a>
     <p>
-        This is a WIP demo recreation of an N64 game called <a
-            href="https://en.wikipedia.org/wiki/Conker%27s_Bad_Fur_Day" target="_blank"
-            rel="noopener noreferrer">"Conker's bad fur day"</a>, specifically a local multiplayer mode called "Heist".
+        A tech demo demonstrating Websockets through a simple game of rock-papers-scissors. The game lets you pick out a
+        name, then you can send the game code to your friend so you can play against each other.
     </p>
     <p>
-        The game involvs 4 players (or teams) competing to steal the most money and store it in their vaults, using
-        various weapons laid throughout the map.
+        The demo was built on the T3 Stack (tRPC, TypeScript, Next.js, Prisma, Tailwind). This stack promotes
+        type-safety from the get-go, for both the frontend and backend.
+        tRPC allows you to set up a type-safe API right alongside your frontend with type checking and intellisense.
     </p>
     <p>
-        The game was built on the <a
-        href="https://godotengine.org/" target="_blank"
-        rel="noopener noreferrer">Godot</a> engine which uses the GDScript language that is based on Python, the engine is completely free and open-source. Models were created using <a
-        href="https://www.blender.org/" target="_blank"
-        rel="noopener noreferrer">Blender</a>
+        The game connection utilizes Websockets to maintain a connection between the 2 players, and update the game
+        state according to player actions. The demo is hosted on Vercel.
     </p>
-    <p>
-        Implemented so far is character movement and spawning, team and score logic, various weapons, attacking and death (with animations!), all in a simple test map inspired by the original.
-    </p>
-    <img src="../images/heist1.png" alt="Screenshot of game" style="width:500px;height:300px;">
-    <img src="../images/heist2.gif" alt="Screenshot of game" style="width:500px;height:300px;">
+    <img src="../images/rps1.png" alt="Screenshot of game" style="width:500px;height:300px;">
+    <img src="../images/rps2.png" alt="Screenshot of game" style="width:500px;height:300px;">
+    <img src="../images/rps3.png" alt="Screenshot of game" style="width:500px;height:150px;">
 </body>
 
 </html>
