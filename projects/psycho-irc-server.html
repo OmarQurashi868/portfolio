@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Qurashi</title>
+    <style>
+        body {
+            padding: 20px 30px;
+            font-family: "Courier New", sans-serif, Arial;
+            background-color: #121212;
+            color: #dbdbdb;
+        }
+
+        a {
+            color: deepskyblue;
+        }
+
+        @media screen and (min-width: 992px) {
+            body {
+                padding: 30px 90px;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <a href="../index.html">Home</a>
+    <h1>Psycho-irc-server</h1>
+    <a href="https://github.com/OmarQurashi868/psycho-irc-server" target="_blank" rel="noopener noreferrer">Github
+        repo</a>
+    <br>
+    <a href="https://hub.docker.com/repository/docker/omarqurashi868/psycho-irc-server" target="_blank"
+        rel="noopener noreferrer">Docker image</a>
+    <p>
+        A simple IRC-like chat server backend using websockets with user authentication.
+    </p>
+    <p>
+        The backend supports fully documented user registeration and login routes with token-based authentication, where
+        websocket connection requests are rejected if auth tokens are not provided or are invalid/expired. The database
+        is used to store all users and valid tokens.
+    </p>
+    <p>
+        The server was built on Express.js using Javascript with knex as the main database engine using SQLite.
+    </p>
+    <p>
+        Unit tests are executed using the Jest framework to insure stability and compatibility.
+    </p>
+    <p>
+        Includes a Dockerfile for building a Docker image and deploying it to the cloud with minimal configuration.
+    </p>
+    <p>
+        Github actions workflows were implemented to automatically test newly pushed builds on pullrequests, as well as
+        building a new Docker image on new version releases and pushing it to the Dockerhub registery automatically.
+    </p>
+</body>
+
+</html>
